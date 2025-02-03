@@ -1,0 +1,90 @@
+* {
+  font-family: "JetBrains Mono", serif;
+  color: var(--darkColorOne);
+  border: none;
+  outline: none;
+  font-style: normal;
+  text-decoration: none;
+}
+
+:root {
+  --darkColorOne: rgb(39, 55, 77);
+  --darkColorTow: rgb(82, 109, 130);
+  --lightColorOne: rgb(157, 178, 191);
+  --lightColorTow: rgb(221, 230, 237);
+}
+
+body {
+  background-image: linear-gradient(
+    to top right,
+    var(--darkColorOne),
+    var(--lightColorOne)
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.photo {
+  background-image: url("https://i.postimg.cc/NjJF15m0/galaxy-nature-aesthetic-background-starry-sky-mountain-remixed-media.jpg");
+}
+
+.box-shadow {
+  box-shadow: 5px 7px 14px -6px rgb(0, 0, 0, 0.4);
+}
+
+.paste-animation {
+  animation: paste 500ms forwards;
+  transform: translateY(-1rem) translateX(-1rem) scale(1.02);
+  opacity: 0;
+}
+
+@keyframes paste {
+  from {
+    transform: translateY(-1rem) translateX(-1rem) scale(1.02);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.down-to-up-animation {
+  animation: downToUp 500ms forwards;
+  transform: translateY(4rem) scale(1.02);
+  opacity: 0;
+}
+
+@keyframes downToUp {
+  from {
+    transform: translateY(4rem) scale(1.02);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.type-animation {
+  animation: typeAnimation 900ms infinite;
+  border-radius: 2px;
+  width: 2px;
+  height: 2rem;
+  opacity: 0;
+  background-color: var(--darkColorOne);
+}
+
+@keyframes typeAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
